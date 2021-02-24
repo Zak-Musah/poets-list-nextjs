@@ -31,8 +31,8 @@ export default function Home() {
           about life help you feel heard, comforted, and give voice to whatever
           hurts or heals right now.
         </p>
-        <Link href="/friends">
-          <a className={styles.btn}>Poems</a>
+        <Link href="/poets">
+          <a className={styles.btn}>Poets</a>
         </Link>
       </div>
     </>
