@@ -1,65 +1,33 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Link from "next/Link";
+import Footer from "../components/Footer";
+import NavBar from "../components/Nav";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    <div>
+      <h1 className={styles.title}>HomePage</h1>
+      <p className={styles.text}>
+        “Life” is such a wide umbrella; a word that covers many, many things,
+        and everyone’s experience of it is different. So let’s narrow it down.
+        Let’s look at some poems about life that crack open how life can feel
+        when we’re struggling and things are hard…but also ones that put a balm
+        on that wound. There’s a lot of shit going on right now. There always
+        is, but it’s been particularly sharp and thorny lately, and sometimes we
+        need someone to put that into the words we just don’t have in us. Words
+        that make us feel heard and understood, that acknowledge our pain and
+        how heavy life can feel. And sometimes we also need to get put back
+        together again; to be reminded of the ways we can get through this, how
+        we have overcome, and how, despite it all, life gives us hope. Poems
+        like that serve as a reminder that we are not alone, and there is still
+        beauty to be had—even if it’s just in the form of a perfect line of
+        poetry. Let this collection of poems about life help you feel heard,
+        comforted, and give voice to whatever hurts or heals right now.
+      </p>
+      <Link href="/friends">
+        <a className={styles.btn}>Poems</a>
+      </Link>
     </div>
-  )
+  );
 }
