@@ -3,14 +3,18 @@ import Link from "next/Link";
 import styles from "../../styles/Poems.module.module.css";
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res1 = await fetch("http://206.189.59.213/api/business-info");
+
+  const data1 = await res1.json();
   const data = await res.json();
 
   return {
-    props: { names: data },
+    props: { names: data, data1 },
   };
 };
 
-const Friends = ({ names }) => {
+const Friends = ({ names, data1 }) => {
+  console.log(data1);
   return (
     <div>
       <h2>Poets</h2>
@@ -21,6 +25,7 @@ const Friends = ({ names }) => {
           </a>
         </Link>
       ))}
+      {JSON.stringify(data1)}
     </div>
   );
 };
